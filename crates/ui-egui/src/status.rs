@@ -15,12 +15,12 @@ pub fn status_bar(app: &mut SlideApp, ui: &mut Ui) {
         let Some(st) = app.session.active() else { return };
         let n = st.doc.slides.len();
         let left = match st.selection.target {
-            deckcraft_engine::Target::Slides => format!("Slide {} of {}", (st.selection.slide + 1).min(n.max(1)), n),
-            _ => "Slide Master".to_string(),
+            deckcraft_engine::Target::Slides => slide_of((st.selection.slide + 1).min(n.max(1)), n),
+            _ => crate::tr("Slide Master").to_string(),
         };
         let p = ui.painter();
         p.text(pos2(rect.min.x + 14.0, rect.center().y), Align2::LEFT_CENTER, &left, theme::font(12.0), t.text_dim);
-        p.text(pos2(rect.min.x + 120.0, rect.center().y), Align2::LEFT_CENTER, "English (United States)", theme::font(12.0), t.text_dim);
+        p.text(pos2(rect.min.x + 120.0, rect.center().y), Align2::LEFT_CENTER, crate::tr("English (United States)"), theme::font(12.0), t.text_dim);
         // Transient status message.
         if let Some((msg, at)) = app.status.clone() {
             if crate::now_ms() - at < 6000.0 {
@@ -93,10 +93,16 @@ fn small_icon(ui: &mut Ui, icon: Icon, tip: &str, on: bool) -> egui::Response {
         ui.painter().rect_filled(r, CornerRadius::same(4), if on { t.selected } else { t.hover });
     }
     icons::paint(ui.painter(), Rect::from_center_size(r.center(), vec2(16.0, 16.0)), icon, t.text_dim, false);
-    resp.on_hover_text(tip)
+    resp.on_hover_text(crate::tr(tip))
+}
+
+/// "Slide 3 of 12" in the interface language.
+pub fn slide_of(n: usize, total: usize) -> String {
+    crate::tr("Slide {n} of {total}").replace("{n}", &n.to_string()).replace("{total}", &total.to_string())
 }
 
 fn labeled(ui: &mut Ui, icon: Icon, label: &str, on: bool) -> egui::Response {
+    let label = crate::tr(label);
     let t = Tokens::get(ui.ctx());
     let w = 22.0 + ui.fonts_mut(|f| f.layout_no_wrap(label.into(), theme::font(12.0), t.text).size().x) + 8.0;
     let (r, resp) = ui.allocate_exact_size(vec2(w, 20.0), Sense::click());

@@ -597,7 +597,7 @@ pub fn ui(app: &mut SlideApp, ui: &mut Ui) {
         painter.text(
             pos2(bar.min.x + 14.0, bar.center().y),
             Align2::LEFT_CENTER,
-            format!("Slide {} of {}", show.state.slide + 1, doc.slides.len()),
+            crate::status::slide_of(show.state.slide + 1, doc.slides.len()),
             theme::font(12.0),
             Color32::from_gray(200),
         );
@@ -807,7 +807,7 @@ fn presenter_window(ctx: &egui::Context, show: &mut Show, doc: &Presentation, no
                         .color(Color32::WHITE),
                     );
                     ui.add_space(20.0);
-                    ui.label(egui::RichText::new(format!("Slide {} of {}", cur + 1, doc.slides.len())).size(16.0).color(Color32::from_gray(200)));
+                    ui.label(egui::RichText::new(crate::status::slide_of(cur + 1, doc.slides.len())).size(16.0).color(Color32::from_gray(200)));
                     ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
                         if ui.button(crate::tr("End Show")).clicked() {
                             *keep = false;

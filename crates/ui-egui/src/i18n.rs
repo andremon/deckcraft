@@ -40,6 +40,8 @@ pub fn find(tag: &str) -> Option<usize> {
 /// Shows the interface in the language of `tag`; English when there is no catalog for it.
 pub fn set_language(tag: &str) {
     CURRENT.store(find(tag).unwrap_or(0), Ordering::Relaxed);
+    // Empty placeholders on the slides speak the interface language too.
+    deckcraft_model::set_prompt_language(|english| tr(english));
 }
 
 /// The language the interface shows.

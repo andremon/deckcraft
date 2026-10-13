@@ -91,6 +91,15 @@ pub enum PhType {
     SlideImage,
 }
 
+/// How the interface translates placeholder prompts (English text in, shown text out).
+static PROMPT_LANGUAGE: std::sync::OnceLock<fn(&'static str) -> &'static str> = std::sync::OnceLock::new();
+
+/// Shows placeholder prompts through `tr` (the interface's translation). Set once; later calls are
+/// ignored.
+pub fn set_prompt_language(tr: fn(&'static str) -> &'static str) {
+    let _ = PROMPT_LANGUAGE.set(tr);
+}
+
 impl PhType {
     pub fn xml(self) -> &'static str {
         match self {
@@ -135,8 +144,15 @@ impl PhType {
     pub fn is_title(self) -> bool {
         matches!(self, PhType::Title | PhType::CtrTitle)
     }
-    /// The prompt shown in an empty placeholder in Normal view.
+    /// The prompt shown in an empty placeholder in Normal view, in the interface language when
+    /// the interface gave one ([`set_prompt_language`]).
     pub fn prompt(self) -> &'static str {
+        let english = self.english_prompt();
+        PROMPT_LANGUAGE.get().map_or(english, |tr| tr(english))
+    }
+
+    /// The prompt in English, as PowerPoint files and the engine name it.
+    pub fn english_prompt(self) -> &'static str {
         match self {
             PhType::Title | PhType::CtrTitle => "Click to add title",
             PhType::SubTitle => "Click to add subtitle",
