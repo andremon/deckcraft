@@ -1,0 +1,437 @@
+# DeckCraft Norwegian (Bokmål) interface catalog: original translations by the DeckCraft contributors.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# English<TAB>Norwegian; \n is a line break (two-line ribbon labels). See src/i18n.rs.
+Back (Esc)	Tilbake (Esc)
+Presentations you open show up here. Use Open to browse for one.	Presentasjoner du åpner, vises her. Bruk Åpne for å bla etter en.
+New	Ny
+Recent	Nylige
+Open a presentation from a folder (Ctrl+O)	Åpne en presentasjon fra en mappe (Ctrl+O)
+Recover Unsaved Presentations	Gjenopprett ulagrede presentasjoner
+Presentations	Presentasjoner
+No presentation is open.	Ingen presentasjon er åpen.
+Not saved yet	Ikke lagret ennå
+Copy path	Kopier bane
+Open file location	Åpne filplassering
+Properties	Egenskaper
+Settings	Innstillinger
+Slides:	Lysbilder:
+Print Hidden Slides	Skriv ut skjulte lysbilder
+Frame Slides	Ramme rundt lysbilder
+Nothing to print: every slide in the range is hidden.	Ingenting å skrive ut: alle lysbildene i området er skjult.
+Create a PDF Document	Lag et PDF-dokument
+Include hidden slides	Ta med skjulte lysbilder
+Create Handouts	Lag støtteark
+Change File Type	Endre filtype
+Appearance	Utseende
+User Information	Brukerinformasjon
+Product Information	Produktinformasjon
+Open source under MIT OR Apache-2.0. Not affiliated with Microsoft.	Åpen kildekode under MIT OR Apache-2.0. Ikke tilknyttet Microsoft.
+Edit Text	Rediger tekst
+Bring to Front	Flytt fremst
+Send to Back	Flytt bakerst
+Group	Grupper
+Link…	Kobling…
+Edit Alt Text…	Rediger alternativ tekst…
+Set as Default Shape	Angi som standardfigur
+Format Shape…	Formater figur…
+Layout	Oppsett
+Reset Slide	Tilbakestill lysbilde
+Format Background…	Formater bakgrunn…
+New Comment	Ny kommentar
+Show	Vis
+Sort	Sorter
+Reverse the order	Snu rekkefølgen
+Grab bag	Diverse
+Table	Tabell
+No contributor data was built into this copy.	Ingen bidragsyterdata ble bygget inn i denne kopien.
+No model credits were built into this copy.	Ingen modellkreditter ble bygget inn i denne kopien.
+Cancel	Avbryt
+Slides sized for:	Lysbildestørrelse for:
+Apply to All	Bruk på alle
+Apply	Bruk
+Show type	Visningstype
+Your changes will be lost if you don't save them.	Endringene dine går tapt hvis du ikke lagrer dem.
+Don't Save	Ikke lagre
+Save	Lagre
+Fit	Tilpass
+Start a conversation	Start en samtale
+How would you describe this object and its context to someone who is blind or has low vision?	Hvordan vil du beskrive dette objektet og sammenhengen det står i, til en som er blind eller svaksynt?
+Paste or type an outline. Unindented lines become slide titles; tab-indented lines become bullets.	Lim inn eller skriv en disposisjon. Linjer uten innrykk blir lysbildetitler; linjer med tabulatorinnrykk blir punkter.
+Export the presentation as:	Eksporter presentasjonen som:
+Print layout:	Utskriftsoppsett:
+Click a symbol to insert it at the insertion point.	Klikk på et symbol for å sette det inn ved innsettingspunktet.
+Type an equation in linear form (e.g. a^2+b^2=c^2, x=(-b±√(b^2-4ac))/2a).	Skriv en formel i lineær form (f.eks. a^2+b^2=c^2, x=(-b±√(b^2-4ac))/2a).
+The spelling check is complete. No issues found.	Stavekontrollen er fullført. Fant ingen problemer.
+Go to	Gå til
+No accessibility issues found. People with disabilities should not have difficulty reading this document.	Fant ingen tilgjengelighetsproblemer. Personer med funksjonsnedsettelser bør ikke ha problemer med å lese dette dokumentet.
+Mark selected text as:	Merk den merkede teksten som:
+Delete	Slett
+Select a chart first.	Merk et diagram først.
+Edit the data: first row = series names, first column = categories.	Rediger dataene: første rad = serienavn, første kolonne = kategorier.
++ Row	+ Rad
++ Series	+ Serie
+Pick a graphic; type one item per line.	Velg en grafikk; skriv ett element per linje.
+General	Generelt
+Dark appearance	Mørkt utseende
+Editing	Redigering
+Show smart guides	Vis smarte hjelpelinjer
+Snap objects to grid	Fest objekter til rutenettet
+Replace straight quotes with smart quotes	Erstatt rette anførselstegn med typografiske
+AutoCorrect as you type	Autokorrektur mens du skriver
+Your name (comments):	Navnet ditt (kommentarer):
+Presentations and slide shows, rebuilt from scratch in pure Rust.	Presentasjoner og lysbildefremvisninger, laget fra bunnen av i ren Rust.
+An open-source, clean-room project. Not affiliated with Microsoft.	Et prosjekt med åpen kildekode, laget fra bunnen av. Ikke tilknyttet Microsoft.
+MIT OR Apache-2.0 · © 2026 ArtCraft Team and the DeckCraft contributors	MIT OR Apache-2.0 · © 2026 ArtCraft-teamet og bidragsyterne til DeckCraft
+Insert Table	Sett inn tabell
+Slide Size	Lysbildestørrelse
+Header and Footer	Topptekst og bunntekst
+Insert Hyperlink	Sett inn hyperkobling
+Set Up Slide Show	Konfigurer lysbildefremvisning
+Zoom	Zoom
+Alt Text	Alternativ tekst
+Slides from Outline	Lysbilder fra disposisjon
+Rename Section	Gi nytt navn til inndeling
+Rename	Gi nytt navn
+Rename Layout	Gi nytt navn til oppsett
+Paragraph	Avsnitt
+About DeckCraft	Om DeckCraft
+Preferences	Innstillinger
+Export	Eksporter
+Symbol	Symbol
+Equation	Formel
+Spelling	Stavekontroll
+Accessibility Checker	Tilgjengelighetskontroll
+Language	Språk
+Custom Shows	Egendefinerte fremvisninger
+Chart Data	Diagramdata
+Trim Media	Trim medier
+Choose a SmartArt Graphic	Velg en SmartArt-grafikk
+Preset gradients	Forhåndsinnstilte gradienter
+Gradient stops	Gradientstopp
+Remove stop	Fjern stopp
+Search commands…	Søk etter kommandoer…
+Picture	Bilde
+Color	Farge
+Select a shape to format it.	Merk en figur for å formatere den.
+Shadow	Skygge
+Reflection	Refleksjon
+Glow	Glød
+Soft Edges	Myke kanter
+Reset Effects	Tilbakestill effekter
+Size	Størrelse
+Position	Plassering
+Text Box	Tekstboks
+Vertical alignment	Loddrett justering
+Wrap text in shape	Bryt tekst i figuren
+Margins (pt)	Marger (pt)
+Columns	Kolonner
+Reset Picture	Tilbakestill bilde
+Fill	Fyll
+Transparency	Gjennomsiktighet
+Rotate with shape	Roter med figuren
+Line	Linje
+No line	Ingen linje
+Solid line	Heltrukket linje
+Automatic	Automatisk
+Width	Bredde
+Dash	Strek
+Insert picture from file…	Sett inn bilde fra fil…
+Hide background graphics	Skjul bakgrunnsgrafikk
+Reset Background	Tilbakestill bakgrunn
+▶ Play All	▶ Spill av alle
+Select an object on the slide and add an animation from the Animations tab.	Merk et objekt på lysbildet og legg til en animasjon fra Animasjoner-fanen.
+Move Up	Flytt opp
+Move Down	Flytt ned
+Remove	Fjern
++ New Comment	+ Ny kommentar
+No comments on this slide.	Ingen kommentarer på dette lysbildet.
+Reply…	Svar…
+Pick a look for your slides. Ideas are generated on your device.	Velg et utseende for lysbildene. Forslagene lages på enheten din.
+Design\nIdeas	Design-\nforslag
+Pictures	Bilder
+SmartArt	SmartArt
+Link	Kobling
+Comment	Kommentar
+Text\nBox	Tekst-\nboks
+Header &\nFooter	Topptekst og\nbunntekst
+Date &\nTime	Dato og\nklokkeslett
+Slide\nNumber	Lysbilde-\nnummer
+Video	Video
+Audio	Lyd
+Format\nBackground	Formater\nbakgrunn
+Apply\nTo All	Bruk\npå alle
+Animation\nPane	Animasjons-\nrute
+Custom\nShow	Egendefinert\nfremvisning
+Set Up\nSlide Show	Konfigurer\nfremvisning
+Check\nAccessibility	Kontroller\ntilgjengelighet
+New\nComment	Ny\nkommentar
+Alt\nText	Alternativ\ntekst
+Format\nPane	Formaterings-\nrute
+Selection\nPane	Merkings-\nrute
+Insert\nAbove	Sett inn\nover
+Insert\nBelow	Sett inn\nunder
+Insert\nLeft	Sett inn\ntil venstre
+Insert\nRight	Sett inn\ntil høyre
+Merge\nCells	Slå sammen\nceller
+Split\nCells	Del opp\nceller
+Edit\nData	Rediger\ndata
+Trim	Trim
+Insert\nLayout	Sett inn\noppsett
+Background\nStyles	Bakgrunns-\nstiler
+Cut	Klipp ut
+Copy	Kopier
+Reset	Tilbakestill
+Change Picture	Endre bilde
+Distribute Rows	Fordel rader
+Distribute Columns	Fordel kolonner
+Increase Font Size	Øk skriftstørrelse
+Decrease Font Size	Reduser skriftstørrelse
+Clear All Formatting	Fjern all formatering
+Bold	Fet
+Italic	Kursiv
+Underline	Understreking
+Strikethrough	Gjennomstreking
+Superscript	Hevet skrift
+Subscript	Senket skrift
+Decrease List Level	Reduser listenivå
+Increase List Level	Øk listenivå
+Align Left	Venstrejuster
+Center	Midtstill
+Align Right	Høyrejuster
+Justify	Blokkjuster
+Ungroup	Del opp gruppe
+Regroup	Grupper på nytt
+Rotate Right 90°	Roter 90° mot høyre
+Rotate Left 90°	Roter 90° mot venstre
+Flip Vertical	Vend loddrett
+Flip Horizontal	Vend vannrett
+Distribute Horizontally	Fordel vannrett
+Distribute Vertically	Fordel loddrett
+Bring Forward	Flytt fremover
+Send Backward	Flytt bakover
+Delete Columns	Slett kolonner
+Delete Rows	Slett rader
+Delete Table	Slett tabell
+Paste	Lim inn
+New\nSlide	Nytt\nlysbilde
+Shapes	Figurer
+Arrange	Ordne
+Quick\nStyles	Hurtig-\nstiler
+Screenshot	Skjermbilde
+Icons	Ikoner
+Chart	Diagram
+Action	Handling
+WordArt	WordArt
+Select	Merk
+Eraser	Viskelær
+Ink to\nShape	Blekk til\nfigur
+Ink to\nText	Blekk til\ntekst
+Ink to\nMath	Blekk til\nformel
+Colors	Farger
+Fonts	Skrifter
+Slide\nSize	Lysbilde-\nstørrelse
+Preview	Forhåndsvis
+Effect\nOptions	Effekt-\nalternativer
+Add\nAnimation	Legg til\nanimasjon
+Trigger	Utløser
+Animation\nPainter	Animasjons-\nkopiering
+Play from\nStart	Spill av\nfra start
+Play from\nCurrent Slide	Spill av fra\ngjeldende lysbilde
+Presenter\nView	Presentasjons-\nvisning
+Hide\nSlide	Skjul\nlysbilde
+Rehearse\nTimings	Øv på\ntidsinnstillinger
+Record	Ta opp
+Cameo	Cameo
+From\nBeginning	Fra\nbegynnelsen
+From\nCurrent Slide	Fra gjeldende\nlysbilde
+Learn\nMore	Lær\nmer
+Thesaurus	Synonymordbok
+Translate	Oversett
+Show\nComments	Vis\nkommentarer
+Slide\nMaster	Lysbilde-\nmal
+Handout\nMaster	Støttearkmal
+Notes\nMaster	Notatmal
+Notes	Notater
+Fit to\nWindow	Tilpass\nvinduet
+Grayscale	Gråtoner
+Dark\nMode	Mørk\nmodus
+Edit\nShape	Rediger\nfigur
+Merge\nShapes	Slå sammen\nfigurer
+Shape\nStyles	Figur-\nstiler
+Bring\nForward	Flytt\nfremover
+Send\nBackward	Flytt\nbakover
+Align	Juster
+Remove\nBackground	Fjern\nbakgrunn
+Corrections	Korrigeringer
+Picture\nStyles	Bilde-\nstiler
+Crop	Beskjær
+Change\nChart Type	Endre\ndiagramtype
+Volume	Volum
+Insert\nPlaceholder	Sett inn\nplassholder
+Themes	Temaer
+Close\nMaster View	Lukk\nmalvisning
+Format	Format
+Section	Inndeling
+Shape Fill	Figurfyll
+Shape Outline	Figuromriss
+Shape Effects	Figureffekter
+Text Fill	Tekstfyll
+Text Outline	Tekstomriss
+Text Effects	Teksteffekter
+Rotate	Roter
+Character Spacing	Tegnavstand
+Change Case	Endre store/små bokstaver
+Line Spacing	Linjeavstand
+Text Direction	Tekstretning
+Align Text	Juster tekst
+Text Highlight Color	Uthevingsfarge for tekst
+Font Color	Skriftfarge
+Shading	Skyggelegging
+  Present  	  Presenter  
+File	Fil
+Paste (⌘V)	Lim inn (⌘V)
+Paste and Match Formatting	Lim inn og tilpass formatering
+Paste Formatting	Lim inn formatering
+Format Painter (double-click to keep it on)	Kopier format (dobbeltklikk for å la det stå på)
+New Slide (⇧⌘N)	Nytt lysbilde (⇧⌘N)
+Duplicate Selected Slides	Dupliser merkede lysbilder
+Slides from Outline…	Lysbilder fra disposisjon…
+Add Section	Legg til inndeling
+Remove All Sections	Fjern alle inndelinger
+Bullets	Punkttegn
+None	Ingen
+Numbering	Nummerering
+Line Spacing Options…	Alternativer for linjeavstand…
+Weight	Tykkelse
+Dashes	Strektyper
+Arrows	Piler
+No Glow	Ingen glød
+Bevel	Avfasing
+Order Objects	Ordne objekter
+Group Objects	Grupper objekter
+Position Objects	Plasser objekter
+Selection Pane…	Merkingsrute…
+Insert Table…	Sett inn tabell…
+Screenshot (not available yet)	Skjermbilde (ikke tilgjengelig ennå)
+Ink to Shape (coming soon)	Blekk til figur (kommer snart)
+Ink to Text (coming soon)	Blekk til tekst (kommer snart)
+Ink to Math (coming soon)	Blekk til formel (kommer snart)
+Reset Slide Background	Tilbakestill lysbildebakgrunn
+Standard (4:3)	Standard (4:3)
+Widescreen (16:9)	Bredformat (16:9)
+Page Setup…	Utskriftsformat…
+Duration:	Varighet:
+On Mouse Click	Ved museklikk
+After:	Etter:
+On Click of… (none)	Ved klikk på… (ingen)
+Animation Painter (double-click to keep it on)	Animasjonskopiering (dobbeltklikk for å la den stå på)
+Start:	Start:
+Delay:	Forsinkelse:
+Recording narration needs audio capture (coming soon)	Opptak av fortellerstemme krever lydopptak (kommer snart)
+Use Timings	Bruk tidsinnstillinger
+Play Narrations	Spill av fortellerstemmer
+Show Media Controls	Vis mediekontroller
+Camera capture is not available yet	Kameraopptak er ikke tilgjengelig ennå
+Thesaurus (coming soon)	Synonymordbok (kommer snart)
+Translation needs a language model (not bundled)	Oversettelse krever en språkmodell (følger ikke med)
+Handout Master (coming soon)	Støttearkmal (kommer snart)
+Notes Master (coming soon)	Notatmal (kommer snart)
+Ruler	Linjal
+Gridlines	Rutenett
+Guides	Hjelpelinjer
+Change Shape	Endre figur
+Merge Shapes	Slå sammen figurer
+Gradient…	Gradient…
+Height:	Høyde:
+Width:	Bredde:
+Width: 	Bredde: 
+Remove Background (coming soon)	Fjern bakgrunn (kommer snart)
+Simple Frame, White	Enkel ramme, hvit
+Drop Shadow Rectangle	Rektangel med slagskygge
+Rounded Diagonal Corner	Avrundet diagonalt hjørne
+Soft Edge Rectangle	Rektangel med myke kanter
+Reflected Rounded Rectangle	Speilet avrundet rektangel
+Oval	Oval
+Crop to Shape	Beskjær til figur
+Header Row	Overskriftsrad
+First Column	Første kolonne
+Total Row	Totalrad
+Last Column	Siste kolonne
+Banded Rows	Radstriper
+Banded Columns	Kolonnestriper
+Start Automatically	Start automatisk
+Play Across Slides	Spill av på tvers av lysbilder
+Loop until Stopped	Gjenta til stoppet
+Hide During Show	Skjul under fremvisning
+Rewind after Playing	Spol tilbake etter avspilling
+Play Full Screen	Spill av i fullskjerm
+Home	Hjem
+Insert	Sett inn
+Draw	Tegn
+Design	Utforming
+Transitions	Overganger
+Animations	Animasjoner
+Slide Show	Lysbildefremvisning
+Review	Se gjennom
+View	Visning
+Slide Master	Lysbildemal
+Shape Format	Figurformat
+Picture Format	Bildeformat
+Table Design	Tabellutforming
+Chart Design	Diagramutforming
+Playback	Avspilling
+Show All	Vis alle
+Hide All	Skjul alle
+Close	Lukk
+End Show	Avslutt fremvisningen
+Next ▶	Neste ▶
+◀ Previous	◀ Forrige
+Click to add text	Klikk for å legge til tekst
+Click to add notes	Klikk for å legge til notater
+Rename Section…	Gi nytt navn til inndeling…
+Remove Section	Fjern inndeling
+Remove Section & Slides	Fjern inndeling og lysbilder
+Move Section Up	Flytt inndelingen opp
+Move Section Down	Flytt inndelingen ned
+New Slide	Nytt lysbilde
+Duplicate Slide	Dupliser lysbilde
+Delete Slide	Slett lysbilde
+Theme Colors	Temafarger
+Standard Colors	Standardfarger
+More Colors… #	Flere farger… #
+RRGGBB	RRGGBB
+Pick	Velg
+Browse	Bla gjennom
+Check for Issues	Se etter problemer
+Revert	Gå tilbake
+Print	Skriv ut
+Previous Page	Forrige side
+Next Page	Neste side
+Create PDF Document	Lag PDF-dokument
+Create PDF	Lag PDF
+Save As	Lagre som
+Fill & Line	Fyll og linje
+Effects	Effekter
+Size & Properties	Størrelse og egenskaper
+Text Options	Tekstalternativer
+Save (⌘S)	Lagre (⌘S)
+Undo (⌘Z)	Angre (⌘Z)
+Redo (⌘Y)	Gjør om (⌘Y)
+Play from Start (F5)	Spill av fra start (F5)
+Search commands (⇧⌘P)	Søk etter kommandoer (⇧⌘P)
+Comments	Kommentarer
+Black Pen	Svart penn
+Red Pen	Rød penn
+Blue Pen	Blå penn
+Pencil	Blyant
+Highlighter	Merkepenn
+Normal	Normal
+Outline\nView	Disposisjons-\nvisning
+Slide\nSorter	Lysbilde-\nsortering
+Notes\nPage	Notatside
+Reading\nView	Lese-\nvisning
+Fit slide to current window	Tilpass lysbildet til vinduet
+Zoom In	Zoom inn
+Zoom Out	Zoom ut
+Reading View	Lesevisning
+Slide Sorter	Lysbildesortering

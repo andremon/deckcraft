@@ -631,19 +631,19 @@ fn context_menu(app: &mut SlideApp, resp: &egui::Response) {
         }
         ui.separator();
         if has_sel {
-            if ui.button("Edit Text").clicked() {
+            if ui.button(crate::tr("Edit Text")).clicked() {
                 let _ = app.run("text.edit", json!({}));
                 ui.close();
             }
-            ui.menu_button("Bring to Front", |ui| {
+            ui.menu_button(crate::tr("Bring to Front"), |ui| {
                 crate::ribbon::menu_item(app, ui, crate::icons::Icon::BringToFront, "Bring to Front", "arrange.bringToFront", json!({}));
                 crate::ribbon::menu_item(app, ui, crate::icons::Icon::BringForward, "Bring Forward", "arrange.bringForward", json!({}));
             });
-            ui.menu_button("Send to Back", |ui| {
+            ui.menu_button(crate::tr("Send to Back"), |ui| {
                 crate::ribbon::menu_item(app, ui, crate::icons::Icon::SendToBack, "Send to Back", "arrange.sendToBack", json!({}));
                 crate::ribbon::menu_item(app, ui, crate::icons::Icon::SendBackward, "Send Backward", "arrange.sendBackward", json!({}));
             });
-            ui.menu_button("Group", |ui| {
+            ui.menu_button(crate::tr("Group"), |ui| {
                 crate::ribbon::menu_item(app, ui, crate::icons::Icon::Group, "Group", "arrange.group", json!({}));
                 crate::ribbon::menu_item(app, ui, crate::icons::Icon::Ungroup, "Ungroup", "arrange.ungroup", json!({}));
             });
@@ -652,24 +652,24 @@ fn context_menu(app: &mut SlideApp, resp: &egui::Response) {
                 let _ = app.run("shape.lock", json!({"locked": !locked}));
                 ui.close();
             }
-            if ui.button("Link…").clicked() {
+            if ui.button(crate::tr("Link…")).clicked() {
                 app.dialog = Some(crate::dialogs::Dialog::new("hyperlink"));
                 ui.close();
             }
-            if ui.button("Edit Alt Text…").clicked() {
+            if ui.button(crate::tr("Edit Alt Text…")).clicked() {
                 app.dialog = Some(crate::dialogs::Dialog::new("altText"));
                 ui.close();
             }
-            if ui.button("Set as Default Shape").clicked() {
+            if ui.button(crate::tr("Set as Default Shape")).clicked() {
                 let _ = app.run("shape.setDefault", json!({}));
                 ui.close();
             }
-            if ui.button("Format Shape…").clicked() {
+            if ui.button(crate::tr("Format Shape…")).clicked() {
                 let _ = app.run("view.pane", json!({"pane": "format"}));
                 ui.close();
             }
         } else {
-            ui.menu_button("Layout", |ui| {
+            ui.menu_button(crate::tr("Layout"), |ui| {
                 let layouts: Vec<(String, u32)> = app
                     .session
                     .active()
@@ -682,15 +682,15 @@ fn context_menu(app: &mut SlideApp, resp: &egui::Response) {
                     }
                 }
             });
-            if ui.button("Reset Slide").clicked() {
+            if ui.button(crate::tr("Reset Slide")).clicked() {
                 let _ = app.run("slide.reset", json!({}));
                 ui.close();
             }
-            if ui.button("Format Background…").clicked() {
+            if ui.button(crate::tr("Format Background…")).clicked() {
                 let _ = app.run("view.pane", json!({"pane": "background"}));
                 ui.close();
             }
-            if ui.button("New Comment").clicked() {
+            if ui.button(crate::tr("New Comment")).clicked() {
                 app.dialog = Some(crate::dialogs::Dialog::new("comment"));
                 ui.close();
             }

@@ -606,7 +606,7 @@ pub fn ui(app: &mut SlideApp, ui: &mut Ui) {
                 .max_rect(Rect::from_min_max(pos2(bar.max.x - 260.0, bar.min.y), bar.max))
                 .layout(egui::Layout::right_to_left(egui::Align::Center)),
         );
-        if child.button("Close").clicked() {
+        if child.button(crate::tr("Close")).clicked() {
             keep = false;
         }
         if child.button("▶").clicked() {
@@ -809,13 +809,13 @@ fn presenter_window(ctx: &egui::Context, show: &mut Show, doc: &Presentation, no
                     ui.add_space(20.0);
                     ui.label(egui::RichText::new(format!("Slide {} of {}", cur + 1, doc.slides.len())).size(16.0).color(Color32::from_gray(200)));
                     ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                        if ui.button("End Show").clicked() {
+                        if ui.button(crate::tr("End Show")).clicked() {
                             *keep = false;
                         }
-                        if ui.button("Next ▶").clicked() {
+                        if ui.button(crate::tr("Next ▶")).clicked() {
                             actions.push(show.state.next(doc));
                         }
-                        if ui.button("◀ Previous").clicked() {
+                        if ui.button(crate::tr("◀ Previous")).clicked() {
                             actions.push(show.state.prev(doc));
                         }
                     });

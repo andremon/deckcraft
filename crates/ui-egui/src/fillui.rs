@@ -109,7 +109,7 @@ pub fn gradient_editor(ui: &mut Ui, id: &str, g: &Gradient, sc: &ColorScheme) ->
     let mut sel: usize = ui.data_mut(|d| d.get_temp(sel_id).unwrap_or(0)).min(g.stops.len().saturating_sub(1));
 
     // Preset variations of the first stop's colour.
-    ui.label("Preset gradients");
+    ui.label(crate::tr("Preset gradients"));
     ui.horizontal_wrapped(|ui| {
         let base = g.stops.first().map(|s| s.color.clone()).unwrap_or(ColorRef::scheme(SchemeSlot::Accent1));
         let mut light = base.clone();
@@ -216,7 +216,7 @@ pub fn gradient_editor(ui: &mut Ui, id: &str, g: &Gradient, sc: &ColorScheme) ->
 
     // Stop bar: click to add, drag a stop to move it.
     ui.add_space(4.0);
-    ui.label("Gradient stops");
+    ui.label(crate::tr("Gradient stops"));
     let (bar, bar_resp) = ui.allocate_exact_size(vec2(ui.available_width().min(260.0), 18.0), Sense::click());
     paint_bar(ui, bar, g, sc);
     let (marks, _) = ui.allocate_exact_size(vec2(bar.width(), 14.0), Sense::hover());
@@ -284,7 +284,7 @@ pub fn gradient_editor(ui: &mut Ui, id: &str, g: &Gradient, sc: &ColorScheme) ->
                 }
             });
             let can_remove = g.stops.len() > 2;
-            if ui.add_enabled(can_remove, egui::Button::new("Remove stop")).clicked() {
+            if ui.add_enabled(can_remove, egui::Button::new(crate::tr("Remove stop"))).clicked() {
                 let mut ng = g.clone();
                 ng.stops.remove(sel);
                 sel = sel.saturating_sub(1);
