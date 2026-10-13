@@ -204,6 +204,10 @@ pub struct SlideApp {
     pub palette: Option<(String, usize)>,
     /// Integrated title bar (macOS traffic lights over our chrome).
     pub integrated_titlebar: bool,
+    /// Whether the app owns its window: moves and maximizes it from the title bar, and asks about
+    /// unsaved presentations when it closes. A host that embeds the editor in its own window turns
+    /// this off.
+    pub owns_window: bool,
     /// The File tab's full-window view (Backstage). Over a presentation it replaces the ribbon,
     /// slides and status bar until Esc or Back; with nothing open it is the start screen. Opening,
     /// creating or closing a presentation leaves it.
@@ -229,6 +233,20 @@ pub struct SlideApp {
     pub selpane: selpane::State,
 }
 
+/// The product name a host program shows instead of "DeckCraft" ([`set_product_name`]).
+static PRODUCT: std::sync::OnceLock<&'static str> = std::sync::OnceLock::new();
+
+/// A program that embeds the editor under its own name: the interface says `name` where it would
+/// name the app. Set once, before the first frame; later calls are ignored.
+pub fn set_product_name(name: &'static str) {
+    let _ = PRODUCT.set(name);
+}
+
+/// The product name the interface shows ("DeckCraft" unless a host set another).
+pub fn product() -> &'static str {
+    PRODUCT.get().copied().unwrap_or("DeckCraft")
+}
+
 impl SlideApp {
     pub fn new(session: Session, mut services: Services) -> Self {
         let audio_out = services.audio_out.take();
@@ -252,6 +270,7 @@ impl SlideApp {
             canvas_region: None,
             palette: None,
             integrated_titlebar: false,
+            owns_window: true,
             backstage: None,
             pending_urls: vec![],
             shot_token: 0,
@@ -366,7 +385,7 @@ impl SlideApp {
             "outline" | "txt" => ("txt", "outline", false),
             "deckcraft" => ("deckcraft", "deckcraft", false),
             other => {
-                self.set_status(format!("DeckCraft can't export “{other}”"));
+                self.set_status(format!("{} can't export “{other}”", product()));
                 return false;
             }
         };
@@ -717,6 +736,16 @@ impl SlideApp {
         }
     }
 
+    /// Installs the interface fonts and theme again on the next frame (which then draws nothing,
+    /// as the first frame does). A host that shares its window with the editor and puts its own
+    /// look back while the editor is hidden calls this when it is shown again, and after it
+    /// changes [`UiState::brightness`].
+    pub fn restyle(&mut self) {
+        self.styled = false;
+        self.restyle = true;
+        self.fonts_ready = false;
+    }
+
     /// Per-frame logic before layout: styles, control requests, screenshots, shortcuts.
     pub fn logic(&mut self, ctx: &egui::Context) {
         let scale = self.ui.ui_scale.clamp(0.5, 3.0);
@@ -753,7 +782,11 @@ impl SlideApp {
         self.collect_screenshots(ctx);
         self.issue_screenshots(ctx);
         // Closing the window with unsaved changes asks first.
-        if ctx.input(|i| i.viewport().close_requested()) && !self.quit_confirmed && self.session.documents().iter().any(|d| d.is_dirty()) {
+        if self.owns_window
+            && ctx.input(|i| i.viewport().close_requested())
+            && !self.quit_confirmed
+            && self.session.documents().iter().any(|d| d.is_dirty())
+        {
             ctx.send_viewport_cmd(egui::ViewportCommand::CancelClose);
             self.show = None;
             if self.dialog.as_ref().is_none_or(|d| d.id != "quit") {
